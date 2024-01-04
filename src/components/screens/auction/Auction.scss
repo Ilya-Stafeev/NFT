@@ -1,0 +1,73 @@
+.auction {
+    margin-top: 100px;
+
+    .auction__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 50px;
+
+        .auction__titlebold {
+            margin: 0;
+            font-family: "Poppins";
+            font-style: normal;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 72px;
+        }
+
+        .auction__titleslim {
+            margin: 0;
+            font-family: "Poppins";
+            font-style: normal;
+            color: #d7d7d7;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 36px;
+            letter-spacing: -1px;
+        }
+    }
+
+    .auction__nft {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        justify-content: space-between;        
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .auction{
+        .auction__nft {
+            grid-template-columns: auto auto;
+            justify-content: space-around;
+        }
+    } 
+}
+
+@media screen and (max-width: 700px) {  
+    .auction{
+        .auction__title {
+            justify-content: center;
+            
+            .auction__titlebold{
+                font-size: 35px;
+            }
+
+            .auction__titleslim {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {  
+    .auction{
+        .auction__nft {
+            grid-template-columns: auto;
+            justify-content: space-around;
+        }
+    }   
+}

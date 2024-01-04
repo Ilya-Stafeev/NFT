@@ -1,0 +1,45 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    .item__img {
+        object-fit: cover;
+        flex-shrink: 0;
+        width: 200px;
+        height: 220px;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+    
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    
+    .item__img:hover {
+        transform: scale(1.05);
+    }
+    
+    .item__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 24px;
+        color: #ffffff;
+    }
+    
+    .item__date {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        color: #bcbcbc;
+    }
+}

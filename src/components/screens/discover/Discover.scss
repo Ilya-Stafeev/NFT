@@ -1,0 +1,123 @@
+.discover {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .discover__text {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      letter-spacing: -1px;
+      color: #ffffff;
+    }
+  }
+
+  .discover__filters {
+    display: flex;
+    align-items: center;
+
+    .discover__filter {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      color: #ffffff;
+
+      .discover__img {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    }
+
+    .discover__filterbtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 30px;
+      background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+      border: none;
+      border-radius: 10px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      color: #ffffff;
+
+      .discover__filterbtn-img {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-content: space-between;
+  }
+
+  &__loadbtn {
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+    width: 161px;
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #bcbcbc;
+  }  
+}
+
+@media screen and (max-width: 1040px) {
+  .discover__items {
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .discover__items {
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .discover__items {
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .discover__title {
+    justify-content: center;
+
+    .discover__filters {
+      display: none;
+    }
+  }  
+}
+
+@media screen and (max-width: 600px) { 
+  .discover__items {
+    grid-template-columns: auto;
+    justify-content: space-around;
+  }
+}

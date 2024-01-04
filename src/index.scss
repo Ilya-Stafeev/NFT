@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;   
+    transition: all .3s ease-in-out;
+    
+    .nft-landingpage {
+        margin: 0 auto;
+        padding: 0 80px;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: #1f1d2b;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 123px;
+            height: 123px;
+            left: 60%;
+            top: 138px;
+            filter: blur(90px);
+            background-color: #fb37ff;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 123px;
+            height: 123px;
+            left: 80%;
+            top: 550px;
+            background-color: #18b2de;
+            filter: blur(80px);
+        }          
+    }
+
+    @media screen and (max-width: 600px) {
+        .nft-landingpage {
+          padding: 0 20px;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 3px; 
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1f1d2b;
+}

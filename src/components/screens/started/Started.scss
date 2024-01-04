@@ -1,0 +1,106 @@
+.started {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+
+  &__boldtext {
+    margin: 0;
+    align-self: center;
+    font-family: "Poppins";
+    font-style: normal;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 72px;
+  }
+
+  &__slimtext {
+    margin: 0;
+    text-align: center;
+    align-self: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    color: #e2e2e2;
+  }
+
+  &__items {
+    padding: 60px 80px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: space-between;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      top: 80px;
+      filter: blur(80px);
+      background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+    }
+
+    .started__itemwrapper {
+      .started__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          border-radius: 18px;
+          background-color: red;
+          background: rgba(255, 255, 255, 0.095);
+          box-shadow: inset 2.01px -2.01px 20px rgba(214, 214, 214, 0.17), inset -3.01333px 3.01333px 3.01333px rgba(255, 255, 255, 0.39);
+          backdrop-filter: blur(74.4293px);
+      }
+
+      .started__item-text {
+        width: 100px;
+        margin: 0;
+        margin-top: 10px;
+        text-align: center;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        color: #ffffff;
+      }
+    }
+  }    
+}
+
+@media screen and (max-width: 825px) {
+  .started__items {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    padding: 50px 0;
+
+    &:before {
+      height: 200px;
+      top: 90px;
+      filter: blur(120px);
+    }
+  }  
+}
+
+@media screen and (max-width: 600px) {
+  .started__boldtext {
+    font-size: 35px;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .started__slimtext {
+    max-width: 80%;
+    margin: auto;
+    font-size: 16px;
+  }
+}

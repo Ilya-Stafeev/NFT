@@ -1,0 +1,249 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
+
+  .box__infobox {
+    animation-name: leftslide;
+    animation-duration: 0.8s;
+    max-height: 500px;
+    max-width: 55%;
+    overflow: hidden;
+
+    .box__infobox-boldtext {
+      margin: 0;
+      font-family: Poppins;
+      color: #ffffff;
+      font-size: 65px;
+      font-weight: 600;
+      line-height: 60px;
+      letter-spacing: -2px;
+      text-align: left;
+    }
+
+    .box__infobox-slimtext {
+      margin: 24px 0;
+      font-family: Poppins;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+    .box__infobox-btnwrapper {
+      display: flex;
+
+      .box__infobox-explorebtn {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1f1d2b;
+        padding: 8px 38px;
+        border-radius: 16px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: -1px;
+        color: #ffffff;
+      }
+
+      .box__infobox-createbtn {
+        cursor: pointer;
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 8px 38px;
+        border: 1px solid #d7d7d7;
+        border-radius: 16px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: -1px;
+        color: #ffffff;
+      }
+
+      .selected {
+        border: none;
+        background: linear-gradient(103.91deg, #9b51e0 21.01%, rgba(48, 129, 237, 0.8) 100%);
+      }
+    }
+  }
+
+  .box__display {
+    animation-name: rightslide;
+    animation-duration: 0.8s;
+    padding: 14px;
+    border: 1px solid;
+    background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);
+    border-radius: 35px;
+    max-height: 450px;
+    max-width: 50%;
+    overflow: hidden;
+
+    .box__display-nft {
+      object-fit: cover;
+      flex-shrink: 0;
+      max-width: 300px;
+      height: 300px;
+      border-radius: 20px;
+    }
+
+    .box__infowrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .box__info {
+        display: flex;
+        align-items: center;
+        font-family: "Poppins";
+        font-style: normal;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 12px;
+
+        .box__info-img {
+          object-fit: cover;
+          flex-shrink: 0;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        .box__info-title {
+          margin: 0;
+        }
+      }
+
+      .box__info2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-family: "Poppins";
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+
+        .box__info2-title {
+          margin: 0;
+        }
+
+        .box__iconwrapper {
+          display: flex;
+          align-items: center;
+
+          .box__iconwrapper-img {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .box {
+    flex-direction: column;   
+
+    .box__infobox {
+      max-height: 450px;
+      max-width: none;
+      margin-bottom: 50px;
+    }
+
+    .box__display {
+      display: none;
+      max-height: none;
+      max-width: none;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    .box__infobox {
+      max-height: none;
+      max-width: none;
+      margin-bottom: 50px;
+    }
+    .box__display {
+      display: block;
+      max-height: none;
+      max-width: none;
+
+      .box__display-nft{
+        width: 100%;
+        height: auto;
+        min-width: 200px;
+      } 
+    }    
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    .box__infobox {
+      max-height: none;
+      max-width: none;
+      margin-bottom: 50px;
+
+      .box__infobox-boldtext {
+        font-size: 45px;
+        line-height: 50px;
+      }
+    
+      .box__infobox-slimtext {
+        font-size: 12px;
+        line-height: 16px;
+      }  
+    } 
+  }  
+}
+
+@media screen and (max-width: 480px) {
+  .box {   
+    .box__infobox {
+      .box__infobox-boldtext {
+        font-size: 32px;
+        line-height: 1.4em;
+        text-align: center;
+      }
+    
+      .box__infobox-slimtext {
+        text-align: center;
+      }
+    
+      .box__infobox-btnwrapper {
+        justify-content: center;
+      }
+    } 
+  }  
+}
+
+@keyframes leftslide {
+  from {
+    transform: translateX(-700px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes rightslide {
+  from {
+    transform: translateX(550px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
